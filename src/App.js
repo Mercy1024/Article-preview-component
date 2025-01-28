@@ -1,4 +1,5 @@
-import { useState, useEffect, act } from "react";
+import { useState, useEffect } from "react";
+import hero from "./drawers.jpg";
 
 function useWindowSize() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 600);
@@ -27,7 +28,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div className="hero_image">
-          <img src="../images/drawers.jpg" alt="hero" />
+          <img src={hero} alt="hero" />
         </div>
         <div className="main">
           <div className="text1">
