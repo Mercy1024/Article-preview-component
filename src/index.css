@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+/* || VARIABLES */
+
+*:root {
+  /* COLOR */
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+
+  /* FONTS */
+  --FF: "Manrope";
+  --FS: 13px;
+  --FW1: 500;
+  --FW2: 700;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  background-color: var(--LightGrayishBlue);
+  font-family: var(--FF);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 1rem;
+
+  @media (min-width: 600px) {
+    max-width: 730px;
+    flex-direction: row;
+    margin: auto;
+  }
+}
+
+.container .hero_image {
+  display: flex;
+  width: 100%;
+  border-radius: 1rem;
+
+  @media (min-width: 600px) {
+    width: 40%;
+  }
+}
+
+.hero_image img {
+  width: 100%;
+  border-radius: 1rem 1rem 0rem 0rem;
+
+  @media (min-width: 600px) {
+    border-radius: 1rem 0 0 1rem;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  flex-direction: column;
+  background-color: var(--White);
+
+  @media (min-width: 600px) {
+    width: 60%;
+    padding: 2rem;
+    border-radius: 0 1rem 1rem 0;
+    align-items: flex-start;
+  }
+}
+
+.main .text1 {
+  font-weight: var(--FW2);
+  font-size: 1rem;
+  color: var(--DarkBlue);
+}
+
+.main .text2 {
+  font-size: var(--FS);
+  color: var(--LightGrey);
+  font-weight: var(--FW1);
+}
+
+.main .profile {
+  display: flex;
+  width: 100%;
+  padding-top: 0.8rem;
+  border-radius: 0 0 1rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main .profile .avatar {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.main .profile img {
+  width: 100%;
+  border-radius: 100%;
+  max-width: 40px;
+}
+
+.main .avatar_details {
+  display: flex;
+  gap: 1rem;
+}
+
+.main .prof_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.main .prof_details .name,
+.main .prof_details .date {
+  white-space: nowrap;
+  font-size: var(--FS);
+}
+
+.prof_details .name {
+  color: var(--VeryDarkBlue);
+}
+
+.prof_details .date {
+  color: var(--LightGrey);
+}
+
+.main .share {
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 100%;
+  background-color: var(--LightGrayishBlue);
+}
+
+.main .active-share {
+  background-color: var(--DesaturatedDarkBlue);
+}
+
+/* .main .share:hover {
+  background-color: var(--DesaturatedDarkBlue);
+} */
+
+.container .active-socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--VeryDarkGrayishBlue);
+  width: 100%;
+  border-radius: 0rem 0rem 1rem 1rem;
+
+  @media (min-width: 600px) {
+    position: absolute;
+    width: 200px;
+    border-radius: 0.5rem;
+    bottom: 100px;
+    right: -6.5%;
+    padding: 0.7rem 0.5rem;
+    justify-content: center;
+  }
+}
+
+.active-socials::after {
+  @media (min-width: 600px) {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--VeryDarkGrayishBlue);
+  }
+}
+
+.active-socials .icons {
+  display: flex;
+  gap: 1rem;
+  transition: 1s;
+}
+
+.container .social {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  color: var(--LightGrey);
+  justify-content: space-between;
+}
+
+.active-socials .share {
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 100%;
+  background-color: var(--DesaturatedDarkBlue);
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
