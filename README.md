@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Url](https://your-solution-url.com)
-- Live Site URL: [live site URL ](https://your-live-site-url.com)
+- Solution URL: [Solution Url](https://www.frontendmentor.io/solutions/article-preview-component-with-react-rbMGKNpv59)
+- Live Site URL: [live site URL ](https://article-preview-component-seven-sigma.vercel.app/)
 
 ## My process
 
